@@ -1,13 +1,13 @@
 #HSE frequency 24MHz
-HSE_Freq = ( 1 + 0e-6 ) * 16e6 ;
+HSE_Freq = ( 1 + 0e-6 ) * 24e6 ;
 #I2S Audio WS frequency 176.4KHz 
-WS_Freq = 352.8e3 ;
+WS_Freq = 176.4e3 ;
 #I2S Data Width
 Data_Witdh = 32 ;
 #I2S Master Clocks Output Enable
 Master_Clocks = 0 ;
 #accuracy
-v_accuracy = 0.5;
+v_accuracy = 0.1;
 #arryay
 import numpy as np
 #pll3 divide
