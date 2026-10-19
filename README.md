@@ -154,6 +154,8 @@ void ch32_i2s_write(uint8_t* ptr, uint32_t len)  //about 164us for this function
 
 &emsp;&emsp;当UAC的速率和I2S速率存在较大误差，会导致一定时间内两个指针变量的相对位置发生变化。代码会记录每次传输的相对位置，这个位置的前后差异和两者速率误差存在数值上的关系。不难推导出两者的频率误差等于一段时间的位置变化差/时间。这是实现上述算法的核心。
 
+# 测试
+
 &emsp;&emsp;测试在176.4KHz的频率下运行效果不错，能实现feedrate的准确计算，随着代码运行打印data rate的频率越来越小，说明UAC和I2S的速率误差越来越小。不过在352.8KHz时由于误差代码，feedback并不理想，384kHz是正常的，说明还是速率误差过大导致的。
 
 ![串口打印输出](./Images/mobaxterm.png)
